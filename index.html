@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shiju Sharon - Aspiring Full Stack Python Developer Portfolio">
+    <title>Shiju Sharon | Developer Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 12px #0000000d;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #334155;
+            margin-left: 22px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        section {
+            padding: 85px 10%;
+            scroll-margin-top: 70px;
+        }
+
+        .hero {
+            min-height: 530px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 55px);
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            color: #64748b;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 23px;
+            border-radius: 7px;
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-outline {
+            background: white;
+            color: #2563eb;
+            border: 1px solid #2563eb;
+        }
+
+        .avatar {
+            width: 230px;
+            height: 230px;
+            min-width: 230px;
+            border-radius: 50%;
+            background: #dbeafe;
+            color: #2563eb;
+            display: grid;
+            place-items: center;
+            font-size: 75px;
+            font-weight: bold;
+            border: 8px solid white;
+            box-shadow: 0 10px 35px #2563eb20;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .section-title span {
+            color: #2563eb;
+        }
+
+        .about {
+            background: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        .skills-grid, .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card, .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px #00000008;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover, .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #93c5fd;
+        }
+
+        .skill-card h3, .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p, .project-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .projects {
+            background: white;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #64748b;
+            margin-bottom: 22px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            background: #0f172a;
+            color: white;
+        }
+
+        @media (max-width: 750px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 65px 7%;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .avatar {
+                width: 170px;
+                height: 170px;
+                min-width: 170px;
+                font-size: 55px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">Shiju.</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Technologies</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="tag">HELLO, WELCOME TO MY PORTFOLIO</div>
+            <h1>Hi, I'm <span>Shiju Sharon</span></h1>
+            <h2>Aspiring Full Stack Python Developer</h2>
+            <p>
+                I enjoy building web applications and exploring
+                modern technologies. I'm continuously learning
+                and developing practical software projects.
+            </p>
+            <a href="#projects" class="btn">View My Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+
+        <div class="avatar">SS</div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <p>
+            I'm Shiju Sharon, an aspiring Full Stack Developer
+            interested in Python backend development and modern
+            web technologies. I am learning by building practical
+            projects and improving my programming skills.
+            My goal is to become a professional software developer.
+        </p>
+    </section>
+
+    <!-- Technologies -->
+    <section id="skills">
+        <h2 class="section-title">My <span>Technologies</span></h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>🐍 Python</h3>
+                <p>Programming and backend development.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>⚡ FastAPI</h3>
+                <p>Building backend applications and APIs.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>🌐 HTML5</h3>
+                <p>Creating website structures.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>🎨 CSS3</h3>
+                <p>Designing modern website layouts.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>💛 JavaScript</h3>
+                <p>Adding interactive website features.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>🗄️ SQLite</h3>
+                <p>Working with relational databases.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>🔧 Git & GitHub</h3>
+                <p>Version control and code collaboration.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>📦 SQLModel</h3>
+                <p>Database models and data management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">My <span>Projects</span></h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>🛒 Akkani Shop</h3>
+                <p>
+                    An e-commerce web application for traditional
+                    palm products, built using Python, FastAPI,
+                    SQLModel and SQLite.
+                </p>
+                <a href="https://github.com/shijusharon93-eng"
+                   target="_blank" rel="noopener">
+                    Explore GitHub →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>🌐 Developer Portfolio</h3>
+                <p>
+                    My personal portfolio website showcasing
+                    my technologies, development skills and projects.
+                </p>
+                <a href="https://github.com/shijusharon93-eng/shijusharon93-eng.github.io"
+                   target="_blank" rel="noopener">
+                    View Repository →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <p>Interested in my work? Let's connect!</p>
+
+        <a class="btn"
+           href="https://github.com/shijusharon93-eng"
+           target="_blank" rel="noopener">
+            Visit My GitHub
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 Shiju Sharon | Developer Portfolio</p>
+        <p>Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+</body>
+</html>
